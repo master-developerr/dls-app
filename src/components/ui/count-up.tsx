@@ -30,16 +30,14 @@ export function CountUp({ target, duration = 1.6, className = "" }: CountUpProps
 
             // Each digit resolves with a stagger
             const charDelay = i * 0.08;
-            const charProgress = Math.min((progress - charDelay) / (1 - charDelay), 1);
+            const charProgress = Math.min(Math.max((progress - charDelay) / (1 - charDelay), 0), 1);
 
             if (charProgress >= 1) return char;
-            if (charProgress < 0) return "0";
 
-            // Cycle through numbers 0-9 rapidly
+            // Sequential numerical increment (0 -> target digit)
             const targetDigit = parseInt(char);
-            const cycleSpeed = 10;
-            const cycled = Math.floor(charProgress * cycleSpeed * targetDigit) % 10;
-            return String(cycled);
+            const currentDigit = Math.floor(charProgress * targetDigit);
+            return String(currentDigit);
           })
           .join("")
       );
