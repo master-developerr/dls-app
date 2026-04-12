@@ -33,7 +33,7 @@ export default function ContactPage() {
                   <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary mt-0.5 md:mt-1 mr-3 md:mr-4 shrink-0" />
                   <div>
                     <h4 className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5 md:mb-1">Toll Free</h4>
-                    <p className="text-lg md:text-xl font-medium text-foreground">1800-XXX-XXXX</p>
+                    <p className="text-lg md:text-xl font-medium text-foreground">+91 94473 30561</p>
                   </div>
                 </div>
 
@@ -41,8 +41,8 @@ export default function ContactPage() {
                   <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mt-0.5 md:mt-1 mr-3 md:mr-4 shrink-0" />
                   <div>
                     <h4 className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5 md:mb-1">WhatsApp Connect</h4>
-                    <p className="text-lg md:text-xl font-medium text-foreground mb-2 md:mb-3">+91 98765 43210</p>
-                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-green-500 hover:text-green-400 transition-colors">
+                    <p className="text-lg md:text-xl font-medium text-foreground mb-2 md:mb-3">+91 94473 30561</p>
+                    <a href="https://wa.me/919447330561" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[10px] md:text-xs font-bold uppercase tracking-widest text-green-500 hover:text-green-400 transition-colors">
                       Chat with Counselor <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 ml-2" />
                     </a>
                   </div>
