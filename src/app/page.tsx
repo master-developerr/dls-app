@@ -54,15 +54,15 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
             {[
-              { label: "Selections", end: 2, suffix: "K+" },
-              { label: "Top Ranks", end: 150, suffix: "+" },
-              { label: "Educators", end: 50, suffix: "+" },
-              { label: "Years Legacy", end: 15, suffix: "" },
+              { label: "Selections", target: "2K+" },
+              { label: "Top Ranks", target: "150+" },
+              { label: "Educators", target: "50+" },
+              { label: "Years Legacy", target: "15" },
             ].map((stat, i) => (
               <FadeIn key={i} delay={0.05 * i} className="p-5 sm:p-8 md:p-14 text-center hover:bg-muted/50 transition-colors">
                 <p className="text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 md:mb-4">{stat.label}</p>
                 <h3 className="text-3xl sm:text-4xl md:text-7xl font-serif text-foreground">
-                  <CountUp end={stat.end} suffix={stat.suffix} />
+                  <CountUp target={stat.target} />
                 </h3>
               </FadeIn>
             ))}

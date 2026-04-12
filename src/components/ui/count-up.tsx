@@ -1,46 +1,51 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface CountUpProps {
-  end: number;
-  suffix?: string;
+  target: string;
   duration?: number;
   className?: string;
 }
 
-export function CountUp({ end, suffix = "", duration = 1.8, className = "" }: CountUpProps) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
-  const hasAnimated = useRef(false);
+const CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ+%#@&";
+
+export function CountUp({ target, duration = 1.6, className = "" }: CountUpProps) {
+  const [display, setDisplay] = useState(() =>
+    target.replace(/[A-Za-z0-9+%]/g, () => CHARS[Math.floor(Math.random() * CHARS.length)])
+  );
 
   useEffect(() => {
-    if (!isInView || hasAnimated.current) return;
-    hasAnimated.current = true;
+    const chars = target.split("");
+    const totalFrames = Math.round((duration * 1000) / 30); // ~30ms per frame
+    let frame = 0;
 
-    const startTime = performance.now();
-    const step = (currentTime: number) => {
-      const elapsed = (currentTime - startTime) / 1000;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease-out cubic for a satisfying deceleration
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(eased * end));
+    const interval = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
 
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        setCount(end);
+      setDisplay(
+        chars
+          .map((char, i) => {
+            // Each character resolves at a staggered time
+            const charProgress = (progress - (i * 0.06)) / (1 - i * 0.06);
+            if (charProgress >= 1) return char;
+            // Non-alphanumeric characters (spaces, etc.) resolve immediately
+            if (!/[A-Za-z0-9+%]/.test(char)) return char;
+            // Show random placeholder
+            return CHARS[Math.floor(Math.random() * CHARS.length)];
+          })
+          .join("")
+      );
+
+      if (frame >= totalFrames) {
+        clearInterval(interval);
+        setDisplay(target);
       }
-    };
+    }, 30);
 
-    requestAnimationFrame(step);
-  }, [isInView, end, duration]);
+    return () => clearInterval(interval);
+  }, [target, duration]);
 
-  return (
-    <span ref={ref} className={className}>
-      {count}{suffix}
-    </span>
-  );
+  return <span className={className}>{display}</span>;
 }
