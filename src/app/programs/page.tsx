@@ -7,10 +7,10 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { buttonVariants } from "@/components/ui/button";
 
 const programs = [
-  { id: "neet-target-2026", title: "NEET Target 2026", duration: "1 Year", mode: "Hybrid", desc: "For XII pass students focusing purely on competitive excellence.", tag: "Most Popular" },
-  { id: "jee-main-adv", title: "JEE Main & Advanced", duration: "1 Year", mode: "Offline", desc: "Rigorous engineering entrance prep." },
-  { id: "keam-special", title: "KEAM Special Batch", duration: "6 Months", mode: "Hybrid", desc: "State level engineering & pharmacy entrance focus." },
-  { id: "foundation-10", title: "Foundation (Class 10)", duration: "1 Year", mode: "Online", desc: "Build the raw analytical baseline for future entrances." },
+  { id: "neet", title: "NEET Target 2026", duration: "1 Year", mode: "Hybrid", desc: "For XII pass students focusing purely on competitive excellence.", tag: "Most Popular" },
+  { id: "jee", title: "JEE Main & Advanced", duration: "1 Year", mode: "Offline", desc: "Rigorous engineering entrance prep." },
+  { id: "keam", title: "KEAM Special Batch", duration: "6 Months", mode: "Hybrid", desc: "State level engineering & pharmacy entrance focus." },
+  { id: "foundation", title: "Foundation (Class 10)", duration: "1 Year", mode: "Online", desc: "Build the raw analytical baseline for future entrances." },
 ];
 
 export default function ProgramsPage() {
@@ -77,29 +77,32 @@ export default function ProgramsPage() {
           <div className="md:col-span-9 border-l-0 md:border-l md:border-t-0 border-border md:pl-12">
             <div className="flex flex-col divide-y divide-border">
               {programs.map((prog, i) => (
-                <FadeIn key={prog.id} delay={0.03 * i} className="py-6 md:py-10 group relative flex flex-col md:flex-row md:items-center justify-between">
-                  <div className="md:w-7/12 pr-0 md:pr-6">
-                    {prog.tag && (
-                      <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary mb-2 md:mb-3 block">{prog.tag}</span>
-                    )}
-                    <Link href={`/programs/${prog.id}`}>
-                      <h3 className="text-2xl md:text-3xl font-serif text-foreground group-hover:text-primary transition-colors cursor-pointer block mb-2 md:mb-4">
+                <FadeIn key={prog.id} delay={0.03 * i}>
+                  <Link 
+                    href={`/programs/${prog.id}`}
+                    className="py-6 md:py-10 group relative flex flex-col md:flex-row md:items-center justify-between hover:bg-muted/30 transition-all duration-300 px-4 -mx-4 active:scale-[0.99] cursor-pointer"
+                  >
+                    <div className="md:w-7/12 pr-0 md:pr-6">
+                      {prog.tag && (
+                        <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary mb-2 md:mb-3 block">{prog.tag}</span>
+                      )}
+                      <h3 className="text-2xl md:text-3xl font-serif text-foreground group-hover:text-primary transition-colors block mb-2 md:mb-4">
                         {prog.title}
                       </h3>
-                    </Link>
-                    <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-4 md:mb-0">
-                      {prog.desc}
-                    </p>
-                  </div>
-                  <div className="md:w-5/12 flex flex-row md:flex-col items-center md:items-end gap-3 md:gap-6 md:border-l border-border md:pl-8 text-left md:text-right">
-                    <div className="flex flex-col items-start md:items-end gap-0.5 md:gap-1">
-                      <span className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Format</span>
-                      <span className="text-xs md:text-sm font-medium text-foreground">{prog.mode} | {prog.duration}</span>
+                      <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-4 md:mb-0">
+                        {prog.desc}
+                      </p>
                     </div>
-                    <Link href={`/programs/${prog.id}`} className={cn(buttonVariants({ variant: "outline" }), "rounded-none border-primary text-primary hover:bg-primary hover:text-white h-9 md:h-10 px-3 md:px-4 py-2 text-xs md:text-sm")}>
-                      Explore <ArrowRight className="ml-2 w-3.5 h-3.5 md:w-4 md:h-4"/>
-                    </Link>
-                  </div>
+                    <div className="md:w-5/12 flex flex-row md:flex-col items-center md:items-end gap-3 md:gap-6 md:border-l border-border md:pl-8 text-left md:text-right">
+                      <div className="flex flex-col items-start md:items-end gap-0.5 md:gap-1">
+                        <span className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Format</span>
+                        <span className="text-xs md:text-sm font-medium text-foreground">{prog.mode} | {prog.duration}</span>
+                      </div>
+                      <div className={cn(buttonVariants({ variant: "outline" }), "rounded-none border-primary text-primary group-hover:bg-primary group-hover:text-white h-9 md:h-10 px-3 md:px-4 py-2 text-xs md:text-sm transition-all")}>
+                        Explore <ArrowRight className="ml-2 w-3.5 h-3.5 md:w-4 md:h-4"/>
+                      </div>
+                    </div>
+                  </Link>
                 </FadeIn>
               ))}
             </div>
