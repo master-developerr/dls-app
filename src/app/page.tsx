@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, ArrowDownRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
+import { CountUp } from "@/components/ui/count-up";
 import Image from "next/image";
 
 export default function Home() {
@@ -53,14 +54,16 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
             {[
-              { label: "Selections", value: "2K+" },
-              { label: "Top Ranks", value: "150+" },
-              { label: "Educators", value: "50+" },
-              { label: "Years Legacy", value: "15" },
+              { label: "Selections", end: 2, suffix: "K+" },
+              { label: "Top Ranks", end: 150, suffix: "+" },
+              { label: "Educators", end: 50, suffix: "+" },
+              { label: "Years Legacy", end: 15, suffix: "" },
             ].map((stat, i) => (
               <FadeIn key={i} delay={0.05 * i} className="p-5 sm:p-8 md:p-14 text-center hover:bg-muted/50 transition-colors">
                 <p className="text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 md:mb-4">{stat.label}</p>
-                <h3 className="text-3xl sm:text-4xl md:text-7xl font-serif text-foreground">{stat.value}</h3>
+                <h3 className="text-3xl sm:text-4xl md:text-7xl font-serif text-foreground">
+                  <CountUp end={stat.end} suffix={stat.suffix} />
+                </h3>
               </FadeIn>
             ))}
           </div>
