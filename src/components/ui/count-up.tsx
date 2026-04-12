@@ -46,7 +46,7 @@ export function CountUp({ target, className = "" }: CountUpProps) {
 
         return next.join("");
       });
-    }, 40); // Increased speed (40ms instead of 100ms)
+    }, 70); // Balanced speed (70ms)
 
     return () => clearInterval(interval);
   }, [target]);
