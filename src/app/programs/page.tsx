@@ -15,16 +15,16 @@ const programs = [
 
 export default function ProgramsPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-background pt-24 pb-20">
+    <div className="flex flex-col min-h-screen bg-background pt-20 md:pt-24 pb-16 md:pb-20">
       
       {/* Editorial Header */}
-      <section className="container mx-auto px-4 max-w-6xl mb-12 border-b border-border pb-12">
+      <section className="container mx-auto px-4 max-w-6xl mb-8 md:mb-12 border-b border-border pb-8 md:pb-12">
         <FadeIn>
-          <h1 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-4">The Curriculum</h1>
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-foreground leading-[1.1] max-w-3xl">
+          <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">The Curriculum</h1>
+          <h2 className="text-3xl sm:text-4xl md:text-7xl font-serif text-foreground leading-[1.1] max-w-3xl">
             Syllabus Engineered for <span className="italic text-primary">Precision</span>.
           </h2>
-          <p className="mt-8 text-xl text-muted-foreground font-light max-w-2xl">
+          <p className="mt-5 md:mt-8 text-base md:text-xl text-muted-foreground font-light max-w-2xl">
             Filter through our curated selection of programs designed precisely for optimal competitive advantage.
           </p>
         </FadeIn>
@@ -32,10 +32,10 @@ export default function ProgramsPage() {
 
       {/* Main Layout */}
       <section className="container mx-auto px-4 max-w-6xl">
-        <div className="grid md:grid-cols-12 gap-12">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12">
           
-          {/* Sidebar / Filters */}
-          <div className="md:col-span-3 space-y-8">
+          {/* Sidebar / Filters — collapsed on mobile */}
+          <div className="md:col-span-3 space-y-6 md:space-y-8 hidden md:block">
             <div className="border-b border-border pb-4">
               <h3 className="flex items-center text-sm font-bold uppercase tracking-widest text-foreground">
                 <Filter className="w-4 h-4 mr-2" /> 
@@ -63,31 +63,41 @@ export default function ProgramsPage() {
             </div>
           </div>
 
+          {/* Mobile filter pills */}
+          <div className="md:hidden flex items-center gap-2 overflow-x-auto pb-4 -mx-1 px-1 scrollbar-none">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mr-1 shrink-0">Filter:</span>
+            {["All", "1 Year", "6 Months", "Offline", "Online", "Hybrid"].map((f) => (
+              <button key={f} className="shrink-0 px-3 py-1.5 border border-border text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:border-primary hover:text-primary transition-colors bg-card whitespace-nowrap">
+                {f}
+              </button>
+            ))}
+          </div>
+
           {/* Program List */}
-          <div className="md:col-span-9 border-l md:border-t-0 border-t border-border md:pl-12 pt-8 md:pt-0">
+          <div className="md:col-span-9 border-l-0 md:border-l md:border-t-0 border-border md:pl-12">
             <div className="flex flex-col divide-y divide-border">
               {programs.map((prog, i) => (
-                <FadeIn key={prog.id} delay={0.05 * i} className="py-8 md:py-10 group relative flex flex-col md:flex-row md:items-center justify-between">
+                <FadeIn key={prog.id} delay={0.03 * i} className="py-6 md:py-10 group relative flex flex-col md:flex-row md:items-center justify-between">
                   <div className="md:w-7/12 pr-0 md:pr-6">
                     {prog.tag && (
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-3 block">{prog.tag}</span>
+                      <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-primary mb-2 md:mb-3 block">{prog.tag}</span>
                     )}
                     <Link href={`/programs/${prog.id}`}>
-                      <h3 className="text-3xl font-serif text-foreground group-hover:text-primary transition-colors cursor-pointer block mb-4">
+                      <h3 className="text-2xl md:text-3xl font-serif text-foreground group-hover:text-primary transition-colors cursor-pointer block mb-2 md:mb-4">
                         {prog.title}
                       </h3>
                     </Link>
-                    <p className="text-muted-foreground font-light text-base leading-relaxed mb-6 md:mb-0">
+                    <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-4 md:mb-0">
                       {prog.desc}
                     </p>
                   </div>
-                  <div className="md:w-5/12 flex flex-col items-start md:items-end gap-5 md:gap-6 border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 pl-0 md:pl-8 text-left md:text-right mt-6 md:mt-0">
-                    <div className="flex flex-col items-start md:items-end gap-1">
-                      <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Format</span>
-                      <span className="text-sm font-medium text-foreground">{prog.mode} | {prog.duration}</span>
+                  <div className="md:w-5/12 flex flex-row md:flex-col items-center md:items-end gap-3 md:gap-6 md:border-l border-border md:pl-8 text-left md:text-right">
+                    <div className="flex flex-col items-start md:items-end gap-0.5 md:gap-1">
+                      <span className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Format</span>
+                      <span className="text-xs md:text-sm font-medium text-foreground">{prog.mode} | {prog.duration}</span>
                     </div>
-                    <Link href={`/programs/${prog.id}`} className={cn(buttonVariants({ variant: "outline" }), "rounded-none border-primary text-primary hover:bg-primary hover:text-white w-full md:w-auto h-10 px-4 py-2")}>
-                      Explore <ArrowRight className="ml-2 w-4 h-4"/>
+                    <Link href={`/programs/${prog.id}`} className={cn(buttonVariants({ variant: "outline" }), "rounded-none border-primary text-primary hover:bg-primary hover:text-white h-9 md:h-10 px-3 md:px-4 py-2 text-xs md:text-sm")}>
+                      Explore <ArrowRight className="ml-2 w-3.5 h-3.5 md:w-4 md:h-4"/>
                     </Link>
                   </div>
                 </FadeIn>

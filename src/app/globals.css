@@ -182,3 +182,15 @@
 .link-underline:hover::after {
   transform: scaleX(1);
 }
+
+/* Mobile-specific overrides */
+@media (max-width: 767px) {
+  .hover-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent !important;
+  }
+  body::after {
+    opacity: 0.008;
+  }
+}

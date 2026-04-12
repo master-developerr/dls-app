@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MobileCTA } from "@/components/layout/MobileCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,12 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} antialiased`}>
-      <body className="font-sans min-h-screen flex flex-col selection:bg-primary selection:text-white">
+      <body className="font-sans min-h-screen flex flex-col selection:bg-primary selection:text-white pb-14 md:pb-0">
         <Navbar />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
+        <MobileCTA />
       </body>
     </html>
   );
