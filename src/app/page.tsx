@@ -9,39 +9,39 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background relative selection:bg-primary selection:text-white">
 
-      {/* --- HERO: Compact Cover Page --- */}
-      <section className="relative min-h-[70vh] md:min-h-[90vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden border-b border-border">
+      {/* --- HERO: Tight Cover Page --- */}
+      <section className="relative min-h-[60vh] md:min-h-[90vh] flex flex-col justify-center items-center text-center px-4 pt-10 pb-12 md:py-0 overflow-hidden border-b border-border">
         {/* Subtle background watermark logo */}
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
-           <Image src="/logomark.png" alt="" width={800} height={800} className="object-contain w-auto h-[60vh] md:h-[80vh]" />
+           <Image src="/logomark.png" alt="" width={800} height={800} className="object-contain w-auto h-[50vh] md:h-[80vh]" />
         </div>
 
         <div className="container relative z-10 mx-auto max-w-5xl flex flex-col items-center">
           <FadeIn delay={0.1}>
-            <span className="inline-flex items-center text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 bg-primary/5 px-3 sm:px-4 py-1.5 rounded-none mb-6 md:mb-10">
+            <span className="inline-flex items-center text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 bg-primary/5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-none mb-4 md:mb-10">
               The New Standard 2026
             </span>
           </FadeIn>
           
           <FadeIn delay={0.15} className="w-full">
-            <h1 className="text-[2.75rem] leading-[0.9] sm:text-6xl md:text-[8rem] lg:text-[10rem] font-serif text-foreground md:leading-[0.85] tracking-tight mb-4 md:mb-8">
+            <h1 className="text-[2.5rem] leading-[0.88] sm:text-6xl md:text-[8rem] lg:text-[10rem] font-serif text-foreground md:leading-[0.85] tracking-tight mb-3 md:mb-8">
               Diligence <br/> <span className="italic font-light text-primary">Learning.</span>
             </h1>
           </FadeIn>
           
           <FadeIn delay={0.2}>
-            <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-2xl font-light leading-relaxed mb-6 md:mb-12">
+            <p className="text-sm sm:text-base md:text-2xl text-muted-foreground max-w-2xl font-light leading-relaxed mb-5 md:mb-12 px-2 sm:px-0">
               We architect the mindset of relentless competitors. Uncompromising pedagogy for medical and engineering entrances.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.25}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 w-full">
-              <Button size="lg" className="h-12 sm:h-14 md:h-16 px-8 md:px-10 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-medium w-full sm:w-auto">
+          <FadeIn delay={0.25} className="w-full max-w-md md:max-w-none">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+              <Button size="lg" className="h-13 sm:h-14 md:h-16 px-8 md:px-10 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-semibold w-full sm:w-auto shadow-lg shadow-primary/20">
                 Commence Journey
               </Button>
-              <Link href="/programs" className="group flex items-center text-xs sm:text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors link-underline pb-1 mt-1 sm:mt-0">
-                Explore Curriculum <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Link href="/programs" className="group flex items-center text-[10px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors mt-1 sm:mt-0">
+                Explore Curriculum <ArrowRight className="ml-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </FadeIn>
