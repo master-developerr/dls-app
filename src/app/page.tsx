@@ -119,19 +119,24 @@ export default function Home() {
           
           <div className="flex flex-col border-border border-b border-t">
             {[
-              { title: "NEET Target 2026", duration: "1 Year Track", desc: "For XII pass students focusing purely on medical competitive excellence." },
-              { title: "JEE Main & Advanced", duration: "1 Year Track", desc: "Rigorous engineering entrance prep crossing the limits of NCERT." },
-              { title: "Foundation Focus", duration: "2 Year Track", desc: "Build the raw analytical baseline required for future entrances early." }
+              { title: "NEET Target 2026", duration: "1 Year Track", desc: "For XII pass students focusing purely on medical competitive excellence.", slug: "neet" },
+              { title: "JEE Main & Advanced", duration: "1 Year Track", desc: "Rigorous engineering entrance prep crossing the limits of NCERT.", slug: "jee" },
+              { title: "Foundation Focus", duration: "2 Year Track", desc: "Build the raw analytical baseline required for future entrances early.", slug: "foundation" }
             ].map((prog, i) => (
-              <FadeIn key={i} delay={0.03 * i} className="group border-b border-border p-5 sm:p-6 md:p-12 pb-6 md:pb-14 bg-background flex flex-col md:flex-row md:items-end justify-between hover-card cursor-pointer border-x border-transparent">
-                <div className="md:w-2/3 mb-4 md:mb-0">
-                  <Badge variant="outline" className="rounded-none border-primary text-primary mb-3 md:mb-6 text-[10px] md:text-xs">{prog.duration}</Badge>
-                  <h4 className="text-2xl md:text-4xl font-serif text-foreground mb-2 md:mb-4 group-hover:text-primary transition-colors">{prog.title}</h4>
-                  <p className="text-sm md:text-lg text-muted-foreground font-light">{prog.desc}</p>
-                </div>
-                <div className="md:w-1/3 flex justify-start md:justify-end mt-2 md:mt-0">
-                   <ArrowDownRight className="w-8 h-8 md:w-12 md:h-12 text-muted-foreground group-hover:text-primary transition-colors duration-500" strokeWidth={1} />
-                </div>
+              <FadeIn key={i} delay={0.03 * i}>
+                <Link 
+                  href={`/programs/${prog.slug}`}
+                  className="group border-b border-border p-5 sm:p-6 md:p-12 pb-6 md:pb-14 bg-background flex flex-col md:flex-row md:items-end justify-between hover-card cursor-pointer border-x border-transparent active:scale-[0.98] transition-all duration-300 block"
+                >
+                  <div className="md:w-2/3 mb-4 md:mb-0">
+                    <Badge variant="outline" className="rounded-none border-primary text-primary mb-3 md:mb-6 text-[10px] md:text-xs">{prog.duration}</Badge>
+                    <h4 className="text-2xl md:text-4xl font-serif text-foreground mb-2 md:mb-4 group-hover:text-primary transition-colors">{prog.title}</h4>
+                    <p className="text-sm md:text-lg text-muted-foreground font-light">{prog.desc}</p>
+                  </div>
+                  <div className="md:w-1/3 flex justify-start md:justify-end mt-2 md:mt-0">
+                     <ArrowDownRight className="w-8 h-8 md:w-12 md:h-12 text-muted-foreground group-hover:text-primary transition-colors duration-500" strokeWidth={1} />
+                  </div>
+                </Link>
               </FadeIn>
             ))}
           </div>
