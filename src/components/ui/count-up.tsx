@@ -8,16 +8,14 @@ interface CountUpProps {
   className?: string;
 }
 
-const CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ+%#@&";
-
 export function CountUp({ target, duration = 1.6, className = "" }: CountUpProps) {
   const [display, setDisplay] = useState(() =>
-    target.replace(/[A-Za-z0-9+%]/g, () => CHARS[Math.floor(Math.random() * CHARS.length)])
+    target.replace(/[0-9]/g, "0")
   );
 
   useEffect(() => {
     const chars = target.split("");
-    const totalFrames = Math.round((duration * 1000) / 30); // ~30ms per frame
+    const totalFrames = Math.round((duration * 1000) / 30);
     let frame = 0;
 
     const interval = setInterval(() => {
@@ -27,13 +25,21 @@ export function CountUp({ target, duration = 1.6, className = "" }: CountUpProps
       setDisplay(
         chars
           .map((char, i) => {
-            // Each character resolves at a staggered time
-            const charProgress = (progress - (i * 0.06)) / (1 - i * 0.06);
+            // Non-digit characters stay as-is (K, +, %, etc.)
+            if (!/[0-9]/.test(char)) return char;
+
+            // Each digit resolves with a stagger
+            const charDelay = i * 0.08;
+            const charProgress = Math.min((progress - charDelay) / (1 - charDelay), 1);
+
             if (charProgress >= 1) return char;
-            // Non-alphanumeric characters (spaces, etc.) resolve immediately
-            if (!/[A-Za-z0-9+%]/.test(char)) return char;
-            // Show random placeholder
-            return CHARS[Math.floor(Math.random() * CHARS.length)];
+            if (charProgress < 0) return "0";
+
+            // Cycle through numbers 0-9 rapidly
+            const targetDigit = parseInt(char);
+            const cycleSpeed = 10;
+            const cycled = Math.floor(charProgress * cycleSpeed * targetDigit) % 10;
+            return String(cycled);
           })
           .join("")
       );
