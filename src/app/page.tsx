@@ -24,7 +24,7 @@ export default function Home() {
           </FadeIn>
           
           <FadeIn delay={0.2} className="w-full">
-            <h1 className="text-7xl md:text-[8rem] lg:text-[10rem] font-serif text-foreground leading-[0.85] tracking-tight mb-8">
+            <h1 className="text-5xl sm:text-6xl md:text-[8rem] lg:text-[10rem] font-serif text-foreground leading-[0.85] tracking-tight mb-6 md:mb-8">
               Diligence <br/> <span className="italic font-light text-primary">Learning.</span>
             </h1>
           </FadeIn>
@@ -58,9 +58,9 @@ export default function Home() {
               { label: "Educators", value: "50+" },
               { label: "Years Legacy", value: "15" },
             ].map((stat, i) => (
-              <FadeIn key={i} delay={0.1 * i} className="p-10 md:p-14 text-center hover:bg-muted/50 transition-colors">
-                <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-4">{stat.label}</p>
-                <h3 className="text-6xl md:text-7xl font-serif text-foreground">{stat.value}</h3>
+              <FadeIn key={i} delay={0.1 * i} className="p-6 sm:p-8 md:p-14 text-center hover:bg-muted/50 transition-colors">
+                <p className="text-[10px] sm:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-2 sm:mb-4">{stat.label}</p>
+                <h3 className="text-4xl sm:text-5xl md:text-7xl font-serif text-foreground">{stat.value}</h3>
               </FadeIn>
             ))}
           </div>
@@ -78,8 +78,8 @@ export default function Home() {
                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground block mb-6 flex items-center">
                      <span className="w-8 h-[1px] bg-primary mr-4 block"></span> Chapter I
                    </span>
-                   <h2 className="text-5xl md:text-7xl font-serif leading-[1.1] text-foreground mb-8">
-                     We do not leave <br/> <span className="italic text-primary">success</span> <br/> to chance.
+                   <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif leading-[1.1] text-foreground mb-6 md:mb-8">
+                     We do not leave <br/> <span className="italic text-primary">success</span> <br className="hidden md:block"/> to chance.
                    </h2>
                    <p className="text-lg text-muted-foreground font-light leading-relaxed">
                      Success in premier entrance examinations is not a product of casual study. It is engineered through brutal consistency, raw structural planning, and absolute clarity.
@@ -94,9 +94,9 @@ export default function Home() {
                 { title: "Elite Pedagogy", desc: "The educators leading DLS are seasoned veterans. Department heads and ex-IITians who have structurally produced the top national ranks for over a decade. They don't just teach; they reverse-engineer the exams." },
                 { title: "Analytic Feedback", desc: "Every mock test, every assessment is torn apart by our performance analytics engine. We isolate your weaknesses in physics mechanics or organic chemistry down to the actual chapter, forcing improvement." },
               ].map((feature, i) => (
-                <FadeIn key={i} className="group flex flex-col hover-card p-10 bg-card border border-transparent">
-                  <span className="text-3xl font-serif text-primary mb-6 block">0{i+1}</span>
-                  <h4 className="text-3xl font-serif text-foreground mb-6">{feature.title}</h4>
+                <FadeIn key={i} className="group flex flex-col hover-card p-6 sm:p-8 md:p-10 bg-card border border-transparent">
+                  <span className="text-2xl md:text-3xl font-serif text-primary mb-4 md:mb-6 block">0{i+1}</span>
+                  <h4 className="text-2xl md:text-3xl font-serif text-foreground mb-4 md:mb-6">{feature.title}</h4>
                   <p className="text-lg text-muted-foreground leading-relaxed font-light">{feature.desc}</p>
                 </FadeIn>
               ))}
@@ -109,9 +109,9 @@ export default function Home() {
       {/* --- CHAPTER II: The Matrix --- */}
       <section className="py-24 md:py-32 bg-muted">
         <div className="container mx-auto px-4 max-w-5xl">
-          <FadeIn className="text-center mb-20">
+          <FadeIn className="text-center mb-16 md:mb-20">
             <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4 block">Chapter II</span>
-            <h3 className="text-5xl md:text-6xl font-serif text-foreground">Curriculum <span className="italic text-primary">Matrix.</span></h3>
+            <h3 className="text-4xl md:text-6xl font-serif text-foreground">Curriculum <span className="italic text-primary">Matrix.</span></h3>
           </FadeIn>
           
           <div className="flex flex-col border-border border-b border-t">
@@ -120,11 +120,11 @@ export default function Home() {
               { title: "JEE Main & Advanced", duration: "1 Year Track", desc: "Rigorous engineering entrance prep crossing the limits of NCERT." },
               { title: "Foundation Focus", duration: "2 Year Track", desc: "Build the raw analytical baseline required for future entrances early." }
             ].map((prog, i) => (
-              <FadeIn key={i} delay={0.05 * i} className="group border-b border-border p-8 md:p-12 pb-14 bg-background flex flex-col md:flex-row md:items-end justify-between hover-card cursor-pointer border-x border-transparent">
+              <FadeIn key={i} delay={0.05 * i} className="group border-b border-border p-6 sm:p-8 md:p-12 pb-10 md:pb-14 bg-background flex flex-col md:flex-row md:items-end justify-between hover-card cursor-pointer border-x border-transparent">
                 <div className="md:w-2/3 mb-8 md:mb-0">
-                  <Badge variant="outline" className="rounded-none border-primary text-primary mb-6">{prog.duration}</Badge>
-                  <h4 className="text-4xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">{prog.title}</h4>
-                  <p className="text-lg text-muted-foreground font-light">{prog.desc}</p>
+                  <Badge variant="outline" className="rounded-none border-primary text-primary mb-4 md:mb-6">{prog.duration}</Badge>
+                  <h4 className="text-3xl md:text-4xl font-serif text-foreground mb-3 md:mb-4 group-hover:text-primary transition-colors">{prog.title}</h4>
+                  <p className="text-base md:text-lg text-muted-foreground font-light">{prog.desc}</p>
                 </div>
                 <div className="md:w-1/3 flex justify-start md:justify-end">
                    <ArrowDownRight className="w-12 h-12 text-muted-foreground group-hover:text-primary transition-colors duration-500" strokeWidth={1} />
@@ -145,7 +145,7 @@ export default function Home() {
       <section className="py-32 md:py-48 bg-card border-t border-border">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <FadeIn>
-            <h2 className="text-6xl md:text-[5rem] font-serif mb-12 leading-[1.1] text-foreground">
+            <h2 className="text-5xl md:text-[5rem] font-serif mb-8 md:mb-12 leading-[1.1] text-foreground">
               Define your <span className="italic text-primary">future.</span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

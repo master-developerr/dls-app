@@ -20,7 +20,7 @@ export default function ResultsPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between">
             <div className="max-w-3xl">
               <h1 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-4">04 / The Legacy</h1>
-              <h2 className="text-5xl md:text-7xl font-serif text-foreground leading-[1.1]">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-foreground leading-[1.1]">
                 Hall of <span className="italic text-primary">Fame.</span>
               </h2>
               <p className="mt-6 text-xl text-muted-foreground font-light">
@@ -39,9 +39,9 @@ export default function ResultsPage() {
       <section className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col border-border border-b">
           {toppers.map((topper, i) => (
-            <FadeIn key={i} delay={0.05 * i} className="group border-b border-t border-border flex flex-col md:flex-row md:items-center justify-between p-8 hover-card bg-card/50">
-              <div className="flex items-center gap-8 md:w-1/2 mb-6 md:mb-0">
-                <span className="text-lg font-serif text-primary w-8">{String(i + 1).padStart(2, '0')}</span>
+            <FadeIn key={i} delay={0.05 * i} className="group border-b border-t border-border flex flex-col md:flex-row md:items-center justify-between p-6 sm:p-8 hover-card bg-card/50">
+              <div className="flex items-center gap-6 md:gap-8 md:w-1/2 mb-6 md:mb-0">
+                <span className="text-lg font-serif text-primary w-6 md:w-8">{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <h3 className="text-2xl font-serif font-medium text-foreground mb-1 group-hover:text-primary transition-colors">{topper.name}</h3>
                   <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground">{topper.year}</span>
@@ -53,7 +53,7 @@ export default function ResultsPage() {
               </div>
 
               <div className="md:w-1/4 text-left md:text-right">
-                <span className="text-3xl font-serif font-medium text-foreground">{topper.rank}</span>
+                <span className="text-2xl md:text-3xl font-serif font-medium text-foreground">{topper.rank}</span>
               </div>
             </FadeIn>
           ))}

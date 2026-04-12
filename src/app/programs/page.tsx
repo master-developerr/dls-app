@@ -21,7 +21,7 @@ export default function ProgramsPage() {
       <section className="container mx-auto px-4 max-w-6xl mb-12 border-b border-border pb-12">
         <FadeIn>
           <h1 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-4">The Curriculum</h1>
-          <h2 className="text-5xl md:text-7xl font-serif text-foreground leading-[1.1] max-w-3xl">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-foreground leading-[1.1] max-w-3xl">
             Syllabus Engineered for <span className="italic text-primary">Precision</span>.
           </h2>
           <p className="mt-8 text-xl text-muted-foreground font-light max-w-2xl">
@@ -67,8 +67,8 @@ export default function ProgramsPage() {
           <div className="md:col-span-9 border-l md:border-t-0 border-t border-border md:pl-12 pt-8 md:pt-0">
             <div className="flex flex-col divide-y divide-border">
               {programs.map((prog, i) => (
-                <FadeIn key={prog.id} delay={0.05 * i} className="py-10 group relative flex flex-col md:flex-row md:items-center justify-between">
-                  <div className="md:w-7/12 pr-6">
+                <FadeIn key={prog.id} delay={0.05 * i} className="py-8 md:py-10 group relative flex flex-col md:flex-row md:items-center justify-between">
+                  <div className="md:w-7/12 pr-0 md:pr-6">
                     {prog.tag && (
                       <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-3 block">{prog.tag}</span>
                     )}
@@ -81,9 +81,9 @@ export default function ProgramsPage() {
                       {prog.desc}
                     </p>
                   </div>
-                  <div className="md:w-5/12 flex flex-col items-end gap-6 border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 pl-0 md:pl-8 text-right">
-                    <div className="flex flex-col items-end gap-1">
-                      <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Format</span>
+                  <div className="md:w-5/12 flex flex-col items-start md:items-end gap-5 md:gap-6 border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 pl-0 md:pl-8 text-left md:text-right mt-6 md:mt-0">
+                    <div className="flex flex-col items-start md:items-end gap-1">
+                      <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Format</span>
                       <span className="text-sm font-medium text-foreground">{prog.mode} | {prog.duration}</span>
                     </div>
                     <Link href={`/programs/${prog.id}`} className={cn(buttonVariants({ variant: "outline" }), "rounded-none border-primary text-primary hover:bg-primary hover:text-white w-full md:w-auto h-10 px-4 py-2")}>

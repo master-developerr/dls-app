@@ -19,8 +19,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <FadeIn>
             <h1 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-6">03 / Origin</h1>
-            <div className="grid md:grid-cols-2 gap-12 items-end">
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-[1.1]">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-end">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-[1.1]">
                 Forging Excellence Since <span className="italic text-primary">2010.</span>
               </h2>
               <div className="pb-4">
@@ -47,8 +47,8 @@ export default function AboutPage() {
       <section className="py-24 md:py-32 bg-card border-b border-border">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <FadeIn>
-            <span className="text-6xl font-serif text-primary opacity-50 block mb-6">"</span>
-            <h3 className="text-3xl md:text-5xl font-serif text-foreground leading-tight max-w-3xl mx-auto mb-10">
+            <span className="text-5xl md:text-6xl font-serif text-primary opacity-50 block mb-6">"</span>
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-serif text-foreground leading-tight max-w-3xl mx-auto mb-10">
               Our mission is not merely to educate, but to architect the mindset of a <span className="italic text-primary">relentless competitor</span>.
             </h3>
             <span className="text-sm uppercase tracking-widest font-bold text-muted-foreground">The DLS Philosophy</span>
@@ -66,10 +66,10 @@ export default function AboutPage() {
             </div>
           </FadeIn>
           
-          <div className="grid md:grid-cols-4 gap-0 border-y border-border divide-y md:divide-y-0 md:divide-x divide-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 border-y border-border divide-y sm:divide-y-0 sm:divide-x divide-border">
             {faculty.map((f, i) => (
-              <FadeIn key={i} delay={0.1 * i} className="p-8 group hover:bg-muted/50 transition-colors hover-card border border-transparent">
-                <div className="aspect-square bg-muted w-full mb-8 relative grayscale group-hover:grayscale-0 transition-all duration-500 overflow-hidden">
+              <FadeIn key={i} delay={0.1 * i} className="p-6 sm:p-8 group hover:bg-muted/50 transition-colors hover-card border border-transparent">
+                <div className="aspect-square bg-muted w-full mb-6 md:mb-8 relative grayscale group-hover:grayscale-0 transition-all duration-500 overflow-hidden">
                   <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h4 className="text-xl font-serif text-foreground mb-1">{f.name}</h4>
