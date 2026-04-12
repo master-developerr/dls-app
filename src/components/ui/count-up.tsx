@@ -14,30 +14,39 @@ export function CountUp({ target, className = "" }: CountUpProps) {
   );
 
   useEffect(() => {
-    const targetDigits = target.split("").map(char => (/[0-9]/.test(char) ? parseInt(char) : char));
-    const currentDigits = target.split("").map(char => (/[0-9]/.test(char) ? 0 : char));
-    
+    // Reset to initial state when target changes
+    setDisplay(target.replace(/[0-9]/g, "0"));
+
     const interval = setInterval(() => {
-      let allReached = true;
-      
-      for (let i = 0; i < targetDigits.length; i++) {
-        const targetVal = targetDigits[i];
-        const currentVal = currentDigits[i];
-        
-        if (typeof targetVal === "number" && typeof currentVal === "number") {
-          if (currentVal < targetVal) {
-            currentDigits[i] = currentVal + 1;
-            allReached = false;
+      setDisplay((current) => {
+        const currentArr = current.split("");
+        const targetArr = target.split("");
+        let allReached = true;
+
+        const next = currentArr.map((char, i) => {
+          const targetChar = targetArr[i];
+          
+          // Only increment if both are digits
+          if (/[0-9]/.test(char) && /[0-9]/.test(targetChar)) {
+            const currentVal = parseInt(char);
+            const targetVal = parseInt(targetChar);
+
+            if (currentVal < targetVal) {
+              allReached = false;
+              return (currentVal + 1).toString();
+            }
           }
+          return char;
+        });
+
+        if (allReached) {
+          clearInterval(interval);
+          return target;
         }
-      }
 
-      setDisplay(currentDigits.join(""));
-
-      if (allReached) {
-        clearInterval(interval);
-      }
-    }, 100); // 100ms per step for visible changes
+        return next.join("");
+      });
+    }, 40); // Increased speed (40ms instead of 100ms)
 
     return () => clearInterval(interval);
   }, [target]);
