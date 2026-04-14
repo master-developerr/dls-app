@@ -80,7 +80,7 @@ export default function AboutPage() {
           <FadeIn>
             <span className="text-4xl md:text-6xl font-serif text-primary opacity-50 block mb-4 md:mb-6">&quot;</span>
             <h3 className="text-xl sm:text-2xl md:text-5xl font-serif text-foreground leading-snug md:leading-tight max-w-3xl mx-auto mb-6 md:mb-10">
-              Our vision is to build a learning system that delivers <span className="italic text-primary">consistent outcomes</span> — regardless of location.
+              Our vision is to build a personalized learning system that guides every student to discover their own <span className="italic text-primary">intuition</span> through repeated, tailored guidance.
             </h3>
             <span className="text-[10px] sm:text-sm uppercase tracking-widest font-bold text-muted-foreground">The DLS Vision</span>
           </FadeIn>
