@@ -10,43 +10,40 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background relative selection:bg-primary selection:text-white">
 
-      {/* --- HERO (top-aligned on mobile, centered full-height on desktop) --- */}
-      <section className="relative flex flex-col items-center overflow-hidden border-b border-border md:justify-center">
-        {/* Subtle background watermark logo — desktop only */}
-        <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center opacity-[0.03] pointer-events-none">
-           <Image src="/logomark.png" alt="" width={800} height={800} className="object-contain w-auto h-[80vh]" />
+      {/* --- HERO --- */}
+      <section className="relative min-h-[60vh] md:min-h-[90vh] flex flex-col justify-center items-center text-center px-4 pt-10 pb-12 md:py-0 overflow-hidden border-b border-border">
+        {/* Subtle background watermark logo */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+           <Image src="/logomark.png" alt="" width={800} height={800} className="object-contain w-auto h-[50vh] md:h-[80vh]" />
         </div>
 
-        {/* Hero content — top-aligned compact block on mobile, centered full-viewport on desktop */}
-        <div className="container relative z-10 mx-auto max-w-5xl flex flex-col items-start md:items-center px-5 pt-4 pb-6 md:pt-0 md:pb-0 md:min-h-[90vh] md:justify-center md:text-center">
+        <div className="container relative z-10 mx-auto max-w-5xl flex flex-col items-center">
           <FadeIn delay={0.1}>
-            <span className="inline-flex items-center text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 bg-primary/5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-none mb-3 md:mb-10">
+            <span className="inline-flex items-center text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 bg-primary/5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-none mb-4 md:mb-10">
               Kerala · Tamil Nadu · UAE
             </span>
           </FadeIn>
           
           <FadeIn delay={0.15} className="w-full">
-            <h1 className="text-[2rem] leading-[0.94] sm:text-5xl md:text-[8rem] lg:text-[10rem] font-serif text-foreground md:leading-[0.85] tracking-tight mb-2.5 md:mb-8">
+            <h1 className="text-[2.5rem] leading-[0.88] sm:text-6xl md:text-[8rem] lg:text-[10rem] font-serif text-foreground md:leading-[0.85] tracking-tight mb-3 md:mb-8">
               Diligence <br/> <span className="italic font-light text-primary">Learning.</span>
             </h1>
           </FadeIn>
           
           <FadeIn delay={0.2}>
-            {/* Short on mobile (1-2 lines), full on desktop */}
-            <p className="text-[13px] leading-[1.5] sm:text-base md:text-2xl text-muted-foreground max-w-[280px] sm:max-w-lg md:max-w-2xl font-light md:leading-relaxed mb-4 md:mb-12">
-              <span className="md:hidden">Structured learning across three regions. Offline centres and hybrid programs.</span>
-              <span className="hidden md:inline">Structured learning across Kerala, Tamil Nadu, and UAE. A unified education system delivering consistent results through offline centres and hybrid learning.</span>
+            <p className="text-sm sm:text-base md:text-2xl text-muted-foreground max-w-2xl font-light leading-relaxed mb-5 md:mb-12 px-2 sm:px-0">
+              Structured learning across Kerala, Tamil Nadu, and UAE. A unified education system delivering consistent results through offline centres and hybrid learning.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.25} className="w-full max-w-sm md:max-w-none">
-            <div className="flex flex-col sm:flex-row items-start md:items-center md:justify-center gap-2.5 sm:gap-6">
-              <Link href="/programs" className="w-full sm:w-auto">
-                <Button size="lg" className="h-[48px] sm:h-14 md:h-16 px-8 md:px-10 text-[15px] md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-semibold w-full sm:w-auto shadow-lg shadow-primary/20">
+          <FadeIn delay={0.25} className="w-full max-w-md md:max-w-none">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+              <Link href="/programs">
+                <Button size="lg" className="h-13 sm:h-14 md:h-16 px-8 md:px-10 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-semibold w-full sm:w-auto shadow-lg shadow-primary/20">
                   View Programs
                 </Button>
               </Link>
-              <Link href="/contact" className="group flex items-center text-[10px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors ml-0.5 md:ml-0">
+              <Link href="/contact" className="group flex items-center text-[10px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors mt-1 sm:mt-0">
                 Book Free Demo <ArrowRight className="ml-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -54,9 +51,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- Classroom Visual (below the fold — separate section) --- */}
+      {/* --- Classroom Visual --- */}
       <section className="border-b border-border bg-background">
-        <div className="container mx-auto max-w-7xl px-3 py-4 sm:px-4 sm:py-6 md:px-4 md:py-14">
+        <div className="container mx-auto max-w-7xl px-4 py-8 md:py-14">
           <FadeIn>
             <div className="relative overflow-hidden rounded-sm md:rounded-md">
               {/* Warm gradient overlay for blending */}
@@ -67,12 +64,12 @@ export default function Home() {
                 alt="A DLS classroom session — structured learning in action"
                 width={1920}
                 height={700}
-                className="w-full h-[180px] sm:h-[280px] md:h-[480px] object-cover object-center"
+                className="w-full h-[200px] sm:h-[300px] md:h-[480px] object-cover object-center"
                 priority
               />
               {/* Editorial caption */}
-              <div className="absolute bottom-0 left-0 right-0 z-20 px-3 sm:px-6 md:px-10 pb-2.5 sm:pb-4 md:pb-8">
-                <p className="text-[8px] sm:text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70 drop-shadow-md">
+              <div className="absolute bottom-0 left-0 right-0 z-20 px-4 sm:px-6 md:px-10 pb-3 sm:pb-4 md:pb-8">
+                <p className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70 drop-shadow-md">
                   Inside a DLS Classroom · Physics Session
                 </p>
               </div>
