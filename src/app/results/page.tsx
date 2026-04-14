@@ -3,12 +3,12 @@ import { Badge } from "@/components/ui/badge";
 
 export default function ResultsPage() {
   const toppers = [
-    { name: "Arjun Kumar", exam: "NEET", rank: "AIR 45", year: 2025 },
-    { name: "Meenakshi S", exam: "JEE Adv", rank: "AIR 112", year: 2025 },
-    { name: "Rahul V", exam: "KEAM", rank: "Rank 1", year: 2024 },
-    { name: "Sara Abraham", exam: "NEET", rank: "AIR 89", year: 2024 },
-    { name: "Mohammed Ali", exam: "JEE Main", rank: "99.98%ile", year: 2024 },
-    { name: "Kavya Menon", exam: "NEET", rank: "AIR 150", year: 2024 },
+    { name: "Arjun Kumar", exam: "NEET", rank: "AIR 45", year: 2025, region: "Kerala" },
+    { name: "Meenakshi S", exam: "JEE Adv", rank: "AIR 112", year: 2025, region: "Kerala" },
+    { name: "Rahul V", exam: "KEAM", rank: "Rank 1", year: 2024, region: "Kerala" },
+    { name: "Sara Abraham", exam: "NEET", rank: "AIR 89", year: 2024, region: "Tamil Nadu" },
+    { name: "Mohammed Ali", exam: "JEE Main", rank: "99.98%ile", year: 2024, region: "UAE" },
+    { name: "Kavya Menon", exam: "NEET", rank: "AIR 150", year: 2024, region: "Kerala" },
   ];
 
   return (
@@ -19,12 +19,12 @@ export default function ResultsPage() {
         <FadeIn>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-0">
             <div className="max-w-3xl">
-              <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">04 / The Legacy</h1>
+              <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">Student Results</h1>
               <h2 className="text-3xl sm:text-4xl md:text-7xl font-serif text-foreground leading-[1.1]">
-                Hall of <span className="italic text-primary">Fame.</span>
+                Consistent <span className="italic text-primary">Outcomes.</span>
               </h2>
               <p className="mt-4 md:mt-6 text-base md:text-xl text-muted-foreground font-light">
-                Numbers do not lie. Behold the apex of competitive achievement.
+                These results reflect the effectiveness of a structured academic system implemented across multiple regions.
               </p>
             </div>
             <div className="text-left md:text-right">
@@ -46,7 +46,7 @@ export default function ResultsPage() {
                 <div className="mb-4">
                   <span className="text-lg font-serif text-primary block mb-1">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="text-xl font-serif font-medium text-foreground mb-1">{topper.name}</h3>
-                  <span className="text-[9px] uppercase tracking-widest font-bold text-muted-foreground">{topper.year}</span>
+                  <span className="text-[9px] uppercase tracking-widest font-bold text-muted-foreground">{topper.year} · {topper.region}</span>
                 </div>
                 <div className="flex items-center justify-between pt-3 border-t border-border">
                   <Badge variant="outline" className="rounded-none border-primary text-primary px-3 py-0.5 text-[10px]">{topper.exam}</Badge>
@@ -62,17 +62,17 @@ export default function ResultsPage() {
         <div className="hidden md:flex flex-col border-border border-b">
           {toppers.map((topper, i) => (
             <FadeIn key={i} delay={0.03 * i} className="group border-b border-t border-border flex flex-row items-center justify-between p-8 hover-card bg-card/50">
-              <div className="flex items-center gap-8 w-1/2">
+              <div className="flex items-center gap-8 w-5/12">
                 <span className="text-lg font-serif text-primary w-8">{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <h3 className="text-2xl font-serif font-medium text-foreground mb-1 group-hover:text-primary transition-colors">{topper.name}</h3>
-                  <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground">{topper.year}</span>
+                  <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground">{topper.year} · {topper.region}</span>
                 </div>
               </div>
-              <div className="w-1/4">
+              <div className="w-3/12">
                 <Badge variant="outline" className="rounded-none border-primary text-primary px-4 py-1">{topper.exam}</Badge>
               </div>
-              <div className="w-1/4 text-right">
+              <div className="w-4/12 text-right">
                 <span className="text-3xl font-serif font-medium text-foreground">{topper.rank}</span>
               </div>
             </FadeIn>

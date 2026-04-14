@@ -58,7 +58,7 @@ export default function AdminContent() {
 
       <div>
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold text-foreground">Manage Results (Hall of Fame)</h2>
+          <h2 className="text-xl font-bold text-foreground">Manage Student Results</h2>
           <Button variant="outline" size="sm" className="border-border text-foreground"><Plus className="w-4 h-4 mr-1" /> Add Result</Button>
         </div>
         <Card className="bg-card border-border">

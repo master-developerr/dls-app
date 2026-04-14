@@ -13,7 +13,7 @@ export function Footer() {
               <Image src="/wordmark-logomark.png" alt="DLS Wordmark" width={300} height={80} className="h-8 md:h-10 w-auto object-contain" />
             </div>
             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-              Empowering students across Kerala, Tamil Nadu, and UAE to achieve their medical and engineering dreams.
+              Structured learning across Kerala, Tamil Nadu, and UAE. Consistent academic standards at every centre.
             </p>
           </div>
           
@@ -22,8 +22,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/programs/neet" className="hover:text-primary transition">NEET Coaching</Link></li>
               <li><Link href="/programs/jee" className="hover:text-primary transition">JEE Coaching</Link></li>
+              <li><Link href="/programs/keam" className="hover:text-primary transition">KEAM Preparation</Link></li>
               <li><Link href="/programs/foundation" className="hover:text-primary transition">Foundation Program</Link></li>
-              <li><Link href="/programs/crash-courses" className="hover:text-primary transition">Crash Courses</Link></li>
             </ul>
           </div>
 
@@ -31,15 +31,14 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/about" className="hover:text-primary transition">About Us</Link></li>
-              <li><Link href="/results" className="hover:text-primary transition">Proven Results</Link></li>
+              <li><Link href="/results" className="hover:text-primary transition">Results</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition">Contact</Link></li>
-              <li><Link href="/admin" className="hover:text-primary transition">Admin Login</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">Subscribe for latest updates & tips.</p>
+            <h3 className="font-semibold text-foreground mb-4">Stay Updated</h3>
+            <p className="text-sm text-muted-foreground mb-4">Subscribe for updates and announcements.</p>
             <div className="flex gap-2">
               <Input placeholder="Enter email" className="bg-background border-border/50" />
               <Button>Join</Button>

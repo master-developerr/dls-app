@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background relative selection:bg-primary selection:text-white">
 
-      {/* --- HERO: Tight Cover Page --- */}
+      {/* --- HERO --- */}
       <section className="relative min-h-[60vh] md:min-h-[90vh] flex flex-col justify-center items-center text-center px-4 pt-10 pb-12 md:py-0 overflow-hidden border-b border-border">
         {/* Subtle background watermark logo */}
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container relative z-10 mx-auto max-w-5xl flex flex-col items-center">
           <FadeIn delay={0.1}>
             <span className="inline-flex items-center text-[10px] sm:text-xs font-bold tracking-widest uppercase text-primary border border-primary/20 bg-primary/5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-none mb-4 md:mb-10">
-              The New Standard 2026
+              Kerala · Tamil Nadu · UAE
             </span>
           </FadeIn>
           
@@ -32,17 +32,19 @@ export default function Home() {
           
           <FadeIn delay={0.2}>
             <p className="text-sm sm:text-base md:text-2xl text-muted-foreground max-w-2xl font-light leading-relaxed mb-5 md:mb-12 px-2 sm:px-0">
-              We architect the mindset of relentless competitors. Uncompromising pedagogy for medical and engineering entrances.
+              Structured learning across Kerala, Tamil Nadu, and UAE. A unified education system delivering consistent results through offline centres and hybrid learning.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.25} className="w-full max-w-md md:max-w-none">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-              <Button size="lg" className="h-13 sm:h-14 md:h-16 px-8 md:px-10 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-semibold w-full sm:w-auto shadow-lg shadow-primary/20">
-                Commence Journey
-              </Button>
-              <Link href="/programs" className="group flex items-center text-[10px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors mt-1 sm:mt-0">
-                Explore Curriculum <ArrowRight className="ml-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+              <Link href="/programs">
+                <Button size="lg" className="h-13 sm:h-14 md:h-16 px-8 md:px-10 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-semibold w-full sm:w-auto shadow-lg shadow-primary/20">
+                  View Programs
+                </Button>
+              </Link>
+              <Link href="/contact" className="group flex items-center text-[10px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors mt-1 sm:mt-0">
+                Book Free Demo <ArrowRight className="ml-1.5 w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </FadeIn>
@@ -54,10 +56,10 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
             {[
-              { label: "Selections", target: "2K+" },
-              { label: "Top Ranks", target: "150+" },
+              { label: "Students Trained", target: "2K+" },
+              { label: "Centres", target: "10+" },
               { label: "Educators", target: "50+" },
-              { label: "Years Legacy", target: "15" },
+              { label: "Regions", target: "3" },
             ].map((stat, i) => (
               <FadeIn key={i} delay={0.05 * i} className="p-5 sm:p-8 md:p-14 text-center hover:bg-muted/50 transition-colors">
                 <p className="text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1 sm:mb-2 md:mb-4">{stat.label}</p>
@@ -70,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- CHAPTER I: The Method --- */}
+      {/* --- About DLS --- */}
       <section className="py-14 md:py-32 border-b border-border bg-background">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-24">
@@ -79,13 +81,13 @@ export default function Home() {
                <div className="lg:sticky lg:top-32">
                  <FadeIn>
                    <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground block mb-4 md:mb-6 flex items-center">
-                     <span className="w-6 md:w-8 h-[1px] bg-primary mr-3 md:mr-4 block"></span> Chapter I
+                     <span className="w-6 md:w-8 h-[1px] bg-primary mr-3 md:mr-4 block"></span> Why DLS
                    </span>
                    <h2 className="text-3xl sm:text-4xl md:text-7xl font-serif leading-[1.1] text-foreground mb-4 md:mb-8">
-                     We do not leave <br className="hidden sm:block"/> <span className="italic text-primary">success</span> <br className="hidden md:block"/> to chance.
+                     A system built <br className="hidden sm:block"/> for <span className="italic text-primary">consistency.</span>
                    </h2>
                    <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-                     Success in premier entrance examinations is not a product of casual study. It is engineered through brutal consistency, raw structural planning, and absolute clarity.
+                     Diligence Learning Solutions brings together traditional classroom learning and modern digital systems to create a consistent academic experience across regions.
                    </p>
                  </FadeIn>
                </div>
@@ -93,9 +95,9 @@ export default function Home() {
 
             <div className="lg:col-span-7 flex flex-col gap-4 md:gap-24">
               {[
-                { title: "Hybrid Architecture", desc: "Combining the immersive focus of elite offline coaching centers with the limitless, 24/7 reach of our proprietary digital learning edge." },
-                { title: "Elite Pedagogy", desc: "The educators leading DLS are seasoned veterans and ex-IITians who have structurally produced the top national ranks for over a decade." },
-                { title: "Analytic Feedback", desc: "Every mock test is torn apart by our performance analytics engine. We isolate your weaknesses down to the actual chapter, forcing improvement." },
+                { title: "Hybrid Learning System", desc: "Offline centres supported by online tools and a centralized learning management system. Students get the best of both formats, regardless of location." },
+                { title: "Multi-Region Presence", desc: "Operating across Kerala, Tamil Nadu, and UAE with a unified academic framework. The same standards, the same quality — everywhere." },
+                { title: "Proven Results", desc: "Structured programs with consistent academic outcomes across all batches. Regular assessments and performance tracking help students stay on course." },
               ].map((feature, i) => (
                 <FadeIn key={i} className="group flex flex-col hover-card p-5 sm:p-6 md:p-10 bg-card border border-transparent">
                   <span className="text-xl md:text-3xl font-serif text-primary mb-3 md:mb-6 block">0{i+1}</span>
@@ -109,19 +111,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- CHAPTER II: The Matrix --- */}
+      {/* --- Programs & Academic Pathways --- */}
       <section className="py-14 md:py-32 bg-muted">
         <div className="container mx-auto px-4 max-w-5xl">
           <FadeIn className="text-center mb-10 md:mb-20">
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3 md:mb-4 block">Chapter II</span>
-            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif text-foreground">Curriculum <span className="italic text-primary">Matrix.</span></h3>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3 md:mb-4 block">Academic Pathways</span>
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif text-foreground">Programs & <span className="italic text-primary">Courses.</span></h3>
           </FadeIn>
           
           <div className="flex flex-col border-border border-b border-t">
             {[
-              { title: "NEET Target 2026", duration: "1 Year Track", desc: "For XII pass students focusing purely on medical competitive excellence.", slug: "neet" },
-              { title: "JEE Main & Advanced", duration: "1 Year Track", desc: "Rigorous engineering entrance prep crossing the limits of NCERT.", slug: "jee" },
-              { title: "Foundation Focus", duration: "2 Year Track", desc: "Build the raw analytical baseline required for future entrances early.", slug: "foundation" }
+              { title: "NEET Coaching", duration: "1 Year Program", desc: "Comprehensive preparation for medical entrance exams with structured study plans and regular assessments.", slug: "neet" },
+              { title: "JEE Main & Advanced", duration: "1 Year Program", desc: "Thorough engineering entrance preparation covering all key concepts and problem-solving techniques.", slug: "jee" },
+              { title: "Foundation Program", duration: "2 Year Program", desc: "Early preparation for students in Class 10, building a strong academic base for future entrance exams.", slug: "foundation" }
             ].map((prog, i) => (
               <FadeIn key={i} delay={0.03 * i}>
                 <Link 
@@ -143,7 +145,7 @@ export default function Home() {
 
           <FadeIn className="mt-10 md:mt-16 text-center">
             <Link href="/programs" className="text-xs sm:text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors inline-flex items-center group link-underline pb-1">
-              View Complete Syllabus <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              View All Programs <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </FadeIn>
         </div>
@@ -154,15 +156,20 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <FadeIn>
             <h2 className="text-4xl md:text-[5rem] font-serif mb-6 md:mb-12 leading-[1.1] text-foreground">
-              Define your <span className="italic text-primary">future.</span>
+              Start your <span className="italic text-primary">journey.</span>
             </h2>
+            <p className="text-base md:text-xl text-muted-foreground font-light mb-8 md:mb-12 max-w-2xl mx-auto">
+              Begin your learning journey with DLS. Explore our programs or book a free demo to learn more about our approach.
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <Button size="lg" className="h-12 sm:h-14 md:h-16 px-10 md:px-14 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-medium w-full sm:w-auto">
-                Reserve Evaluation
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" className="h-12 sm:h-14 md:h-16 px-10 md:px-14 text-base md:text-lg rounded-none bg-primary text-white hover:bg-primary/90 font-medium w-full sm:w-auto">
+                  Book Free Demo
+                </Button>
+              </Link>
             </div>
             <p className="mt-6 md:mt-10 text-muted-foreground/60 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-widest">
-              Limited Intake per batch ensuring elite focus.
+              Available across Kerala, Tamil Nadu & UAE
             </p>
           </FadeIn>
         </div>

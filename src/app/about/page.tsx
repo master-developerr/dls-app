@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const faculty = [
-    { name: "Dr. AN Sharma", subject: "Physics", exp: "20+ Years, Ex-Kota" },
-    { name: "Prof. R Menon", subject: "Chemistry", exp: "15+ Years, HOD" },
-    { name: "Dr. L Zachariah", subject: "Biology", exp: "18+ Years, MBBS" },
-    { name: "Mr. V Pillai", subject: "Mathematics", exp: "22+ Years, Ex-IITian" },
+    { name: "Dr. AN Sharma", subject: "Physics", exp: "20+ Years Experience" },
+    { name: "Prof. R Menon", subject: "Chemistry", exp: "15+ Years Experience" },
+    { name: "Dr. L Zachariah", subject: "Biology", exp: "18+ Years Experience" },
+    { name: "Mr. V Pillai", subject: "Mathematics", exp: "22+ Years Experience" },
   ];
 
   return (
@@ -16,23 +16,27 @@ export default function AboutPage() {
       <section className="pt-20 pb-10 md:pt-32 md:pb-24 border-b border-border">
         <div className="container mx-auto px-4 max-w-6xl">
           <FadeIn>
-            <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-4 md:mb-6">03 / Origin</h1>
+            <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-4 md:mb-6">About Us</h1>
             <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-end">
               <h2 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-serif text-foreground leading-[1.1]">
-                Forging Excellence Since <span className="italic text-primary">2010.</span>
+                Building Consistency Since <span className="italic text-primary">2010.</span>
               </h2>
               <div className="pb-2 md:pb-4">
                 <p className="text-base md:text-xl text-muted-foreground font-light leading-relaxed mb-5 md:mb-6">
-                  Diligence Learning Solutions was built on a singular premise: structure over chaos. We transform average effort into national ranks.
+                  DLS was founded with the idea of building a structured and consistent learning system. Today, it operates across multiple regions while maintaining the same academic standards.
                 </p>
                 <div className="flex items-center gap-8 md:gap-12">
                   <div className="flex flex-col">
-                    <span className="text-3xl md:text-4xl font-serif text-foreground">15</span>
-                    <span className="text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground font-bold mt-1 md:mt-2">Years Legacy</span>
+                    <span className="text-3xl md:text-4xl font-serif text-foreground">3</span>
+                    <span className="text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground font-bold mt-1 md:mt-2">Regions</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-3xl md:text-4xl font-serif text-foreground">50+</span>
                     <span className="text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground font-bold mt-1 md:mt-2">Educators</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-3xl md:text-4xl font-serif text-foreground">10+</span>
+                    <span className="text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground font-bold mt-1 md:mt-2">Centres</span>
                   </div>
                 </div>
               </div>
@@ -41,15 +45,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Mission - Magazine Quote Style */}
+      {/* Our Presence */}
+      <section className="py-14 md:py-32 bg-muted border-b border-border">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <FadeIn className="text-center mb-10 md:mb-16">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3 md:mb-4 block">Our Presence</span>
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif text-foreground mb-6 md:mb-8">Operating Across <span className="italic text-primary">Three Regions.</span></h3>
+            <p className="text-base md:text-xl text-muted-foreground font-light max-w-2xl mx-auto">
+              A unified academic framework across Kerala, Tamil Nadu, and UAE — delivering the same quality of education at every centre.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-0 border border-border">
+            {[
+              { region: "Kerala", detail: "Head Office — Trivandrum", desc: "Our founding region with multiple centres across the state. This is where DLS started and continues to grow." },
+              { region: "Tamil Nadu", detail: "Kanyakumari · Nagercoil · Tirunelveli", desc: "Expanding across southern Tamil Nadu with the same structured programs and academic standards." },
+              { region: "UAE", detail: "Dubai · Abu Dhabi", desc: "Extending structured learning to students in UAE through live hybrid programs and dedicated support." },
+            ].map((loc, i) => (
+              <FadeIn key={i} delay={0.05 * i} className="p-6 md:p-10 bg-background border-b md:border-b-0 md:border-r last:border-r-0 border-border">
+                <span className="text-sm font-serif text-primary mb-3 block">0{i + 1}</span>
+                <h4 className="text-2xl md:text-3xl font-serif text-foreground mb-2">{loc.region}</h4>
+                <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4">{loc.detail}</p>
+                <p className="text-sm md:text-base text-muted-foreground font-light leading-relaxed">{loc.desc}</p>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Vision - Magazine Quote Style */}
       <section className="py-14 md:py-32 bg-card border-b border-border">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <FadeIn>
-            <span className="text-4xl md:text-6xl font-serif text-primary opacity-50 block mb-4 md:mb-6">"</span>
+            <span className="text-4xl md:text-6xl font-serif text-primary opacity-50 block mb-4 md:mb-6">&quot;</span>
             <h3 className="text-xl sm:text-2xl md:text-5xl font-serif text-foreground leading-snug md:leading-tight max-w-3xl mx-auto mb-6 md:mb-10">
-              Our mission is not merely to educate, but to architect the mindset of a <span className="italic text-primary">relentless competitor</span>.
+              Our vision is to build a learning system that delivers <span className="italic text-primary">consistent outcomes</span> — regardless of location.
             </h3>
-            <span className="text-[10px] sm:text-sm uppercase tracking-widest font-bold text-muted-foreground">The DLS Philosophy</span>
+            <span className="text-[10px] sm:text-sm uppercase tracking-widest font-bold text-muted-foreground">The DLS Vision</span>
           </FadeIn>
         </div>
       </section>
@@ -59,9 +91,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <FadeIn className="mb-10 md:mb-16 pb-4 md:pb-6 border-b border-border flex flex-col md:flex-row md:items-end justify-between">
             <div>
-              <h2 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">The Vanguard</h2>
-              <h3 className="text-3xl md:text-5xl font-serif text-foreground">Elite Faculty</h3>
+              <h2 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">Our Team</h2>
+              <h3 className="text-3xl md:text-5xl font-serif text-foreground">Experienced Faculty</h3>
             </div>
+            <p className="text-sm md:text-base text-muted-foreground font-light max-w-sm mt-3 md:mt-0">Senior educators with strong academic backgrounds across all subjects.</p>
           </FadeIn>
           
           {/* Mobile: 2-col grid, Desktop: 4-col */}

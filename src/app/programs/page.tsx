@@ -7,10 +7,10 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { buttonVariants } from "@/components/ui/button";
 
 const programs = [
-  { id: "neet", title: "NEET Target 2026", duration: "1 Year", mode: "Hybrid", desc: "For XII pass students focusing purely on competitive excellence.", tag: "Most Popular" },
-  { id: "jee", title: "JEE Main & Advanced", duration: "1 Year", mode: "Offline", desc: "Rigorous engineering entrance prep." },
-  { id: "keam", title: "KEAM Special Batch", duration: "6 Months", mode: "Hybrid", desc: "State level engineering & pharmacy entrance focus." },
-  { id: "foundation", title: "Foundation (Class 10)", duration: "1 Year", mode: "Online", desc: "Build the raw analytical baseline for future entrances." },
+  { id: "neet", title: "NEET Coaching", duration: "1 Year", mode: "Hybrid", desc: "Comprehensive medical entrance preparation with structured study plans and regular assessments.", tag: "Most Popular" },
+  { id: "jee", title: "JEE Main & Advanced", duration: "1 Year", mode: "Offline", desc: "Thorough engineering entrance preparation covering key concepts and problem-solving techniques." },
+  { id: "keam", title: "KEAM Preparation", duration: "6 Months", mode: "Hybrid", desc: "Focused preparation for Kerala state engineering and pharmacy entrance exams." },
+  { id: "foundation", title: "Foundation Program", duration: "1 Year", mode: "Online", desc: "Early academic preparation for Class 10 students building a strong base for future entrance exams." },
 ];
 
 export default function ProgramsPage() {
@@ -20,12 +20,12 @@ export default function ProgramsPage() {
       {/* Editorial Header */}
       <section className="container mx-auto px-4 max-w-6xl mb-8 md:mb-12 border-b border-border pb-8 md:pb-12">
         <FadeIn>
-          <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">The Curriculum</h1>
+          <h1 className="text-[10px] sm:text-sm font-bold tracking-widest uppercase text-muted-foreground mb-3 md:mb-4">Academic Pathways</h1>
           <h2 className="text-3xl sm:text-4xl md:text-7xl font-serif text-foreground leading-[1.1] max-w-3xl">
-            Syllabus Engineered for <span className="italic text-primary">Precision</span>.
+            Programs Designed for <span className="italic text-primary">Progress</span>.
           </h2>
           <p className="mt-5 md:mt-8 text-base md:text-xl text-muted-foreground font-light max-w-2xl">
-            Filter through our curated selection of programs designed precisely for optimal competitive advantage.
+            Our programs are designed to provide consistent learning outcomes across all DLS centres and online platforms.
           </p>
         </FadeIn>
       </section>
@@ -39,7 +39,7 @@ export default function ProgramsPage() {
             <div className="border-b border-border pb-4">
               <h3 className="flex items-center text-sm font-bold uppercase tracking-widest text-foreground">
                 <Filter className="w-4 h-4 mr-2" /> 
-                Refine Search
+                Filter Programs
               </h3>
             </div>
             <div className="space-y-6">
@@ -99,7 +99,7 @@ export default function ProgramsPage() {
                         <span className="text-xs md:text-sm font-medium text-foreground">{prog.mode} | {prog.duration}</span>
                       </div>
                       <div className={cn(buttonVariants({ variant: "outline" }), "rounded-none border-primary text-primary group-hover:bg-primary group-hover:text-white h-9 md:h-10 px-3 md:px-4 py-2 text-xs md:text-sm transition-all")}>
-                        Explore <ArrowRight className="ml-2 w-3.5 h-3.5 md:w-4 md:h-4"/>
+                        View Details <ArrowRight className="ml-2 w-3.5 h-3.5 md:w-4 md:h-4"/>
                       </div>
                     </div>
                   </Link>

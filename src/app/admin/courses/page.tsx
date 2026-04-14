@@ -4,9 +4,10 @@ import { Plus, Edit, Trash2 } from "lucide-react";
 
 export default function AdminCourses() {
   const courses = [
-    { id: 1, name: "NEET Target 2026", duration: "1 Year", mode: "Hybrid" },
+    { id: 1, name: "NEET Coaching", duration: "1 Year", mode: "Hybrid" },
     { id: 2, name: "JEE Main & Advanced", duration: "1 Year", mode: "Offline" },
-    { id: 3, name: "Foundation Program", duration: "2 Years", mode: "Hybrid" },
+    { id: 3, name: "KEAM Preparation", duration: "6 Months", mode: "Hybrid" },
+    { id: 4, name: "Foundation Program", duration: "2 Years", mode: "Online & Offline" },
   ];
 
   return (
