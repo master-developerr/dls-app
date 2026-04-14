@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="container flex h-14 md:h-16 max-w-screen-xl items-center justify-between px-4 mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/logomark.png" alt="DLS Logomark" width={48} height={48} className="h-7 md:h-10 w-auto object-contain" />
+          <Image src="/wordmark-logomark.png" alt="DLS" width={300} height={80} className="h-7 md:h-9 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -59,7 +59,7 @@ export function Navbar() {
             
             {/* Menu Header */}
             <div className="p-6 pb-4 border-b border-border/40">
-              <Image src="/logomark.png" alt="DLS" width={40} height={40} className="h-8 w-auto object-contain" />
+              <Image src="/wordmark-logomark.png" alt="DLS" width={300} height={80} className="h-8 w-auto object-contain" />
             </div>
 
             {/* Primary Navigation */}
