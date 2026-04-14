@@ -51,6 +51,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- Classroom Visual --- */}
+      <section className="border-b border-border bg-background">
+        <div className="container mx-auto max-w-7xl px-4 py-8 md:py-14">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-sm md:rounded-md">
+              {/* Warm gradient overlay for blending */}
+              <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-background/40 via-transparent to-background/20"></div>
+              <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-background/15 via-transparent to-background/15"></div>
+              <Image
+                src="/classroom.png"
+                alt="A DLS classroom session — structured learning in action"
+                width={1920}
+                height={700}
+                className="w-full h-[200px] sm:h-[300px] md:h-[480px] object-cover object-center"
+                priority
+              />
+              {/* Editorial caption */}
+              <div className="absolute bottom-0 left-0 right-0 z-20 px-4 sm:px-6 md:px-10 pb-3 sm:pb-4 md:pb-8">
+                <p className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-widest text-white/70 drop-shadow-md">
+                  Inside a DLS Classroom · Physics Session
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* --- Stats Ticker --- */}
       <section className="border-b border-border bg-card">
         <div className="container mx-auto max-w-7xl">
