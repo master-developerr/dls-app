@@ -8,7 +8,6 @@ export function Navbar() {
   const primaryRoutes = [
     { name: "Home", path: "/" },
     { name: "Programs", path: "/programs" },
-    { name: "Results", path: "/results" },
   ];
 
   const secondaryRoutes = [

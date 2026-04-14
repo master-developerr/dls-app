@@ -244,39 +244,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- Results Preview --- */}
-      <section className="py-14 md:py-28 border-b border-border bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <FadeIn className="text-center mb-10 md:mb-16">
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3 md:mb-4 block">Track Record</span>
-            <h3 className="text-3xl sm:text-4xl md:text-6xl font-serif text-foreground">Consistent Academic <span className="italic text-primary">Outcomes.</span></h3>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light mt-4 md:mt-6 max-w-2xl mx-auto">
-              Our structured approach delivers measurable results across all batches and regions.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-border">
-            {[
-              { label: "NEET Selections", value: "1200+" },
-              { label: "JEE Qualifications", value: "500+" },
-              { label: "KEAM Top 100", value: "85+" },
-              { label: "State Ranks", value: "150+" },
-            ].map((result, i) => (
-              <FadeIn key={i} delay={0.05 * i} className="p-5 sm:p-6 md:p-10 text-center border-b md:border-b-0 md:border-r last:border-r-0 border-border bg-card hover:bg-muted/50 transition-colors">
-                <p className="text-3xl md:text-5xl font-serif text-foreground mb-2 md:mb-3">{result.value}</p>
-                <p className="text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-widest">{result.label}</p>
-              </FadeIn>
-            ))}
-          </div>
-
-          <FadeIn className="mt-10 md:mt-12 text-center">
-            <Link href="/results" className="text-xs sm:text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors inline-flex items-center group link-underline pb-1">
-              View Full Results <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* --- FINAL CTA --- */}
       <section className="py-20 md:py-48 bg-card border-t border-border">
         <div className="container mx-auto px-4 text-center max-w-4xl">
