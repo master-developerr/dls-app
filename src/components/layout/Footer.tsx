@@ -15,6 +15,9 @@ export function Footer() {
             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
               Structured learning across Kerala, Tamil Nadu, and UAE. Consistent academic standards at every centre.
             </p>
+            <p className="text-xs text-muted-foreground mt-2">
+              UAE: +971 56 253 0561
+            </p>
           </div>
           
           <div>

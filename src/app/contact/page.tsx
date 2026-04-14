@@ -49,6 +49,14 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary mt-0.5 md:mt-1 mr-3 md:mr-4 shrink-0" />
+                  <div>
+                    <h4 className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5 md:mb-1">UAE Contact</h4>
+                    <p className="text-lg md:text-xl font-medium text-foreground">+971 56 253 0561</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
                   <Mail className="w-4 h-4 md:w-5 md:h-5 text-primary mt-0.5 md:mt-1 mr-3 md:mr-4 shrink-0" />
                   <div>
                     <h4 className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground mb-0.5 md:mb-1">Email</h4>
@@ -87,6 +95,7 @@ export default function ContactPage() {
                     <p className="text-base md:text-lg text-foreground font-light leading-relaxed">
                       Dubai · Abu Dhabi
                     </p>
+                    <p className="text-sm text-muted-foreground mt-1">+971 56 253 0561</p>
                   </div>
                 </div>
               </div>

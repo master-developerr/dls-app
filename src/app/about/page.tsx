@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const faculty = [
-    { name: "Dr. AN Sharma", subject: "Physics", exp: "20+ Years Experience" },
-    { name: "Prof. R Menon", subject: "Chemistry", exp: "15+ Years Experience" },
-    { name: "Dr. L Zachariah", subject: "Biology", exp: "18+ Years Experience" },
-    { name: "Mr. V Pillai", subject: "Mathematics", exp: "22+ Years Experience" },
+    { name: "Nadarsha", subject: "Physics", image: "/faculty/nadarsha.png" },
+    { name: "Arun B", subject: "Chemistry", image: "/faculty/arun-b.png" },
+    { name: "Mrs Priya", subject: "Mathematics", image: "/faculty/mrs-priya.png" },
+    { name: "Ershad A", subject: "General Aptitude", image: "/faculty/ershad-a.png" },
+    { name: "Shaija Thomas", subject: "Biology", image: "/faculty/shaija-thomas.png" },
   ];
 
   return (
@@ -97,16 +98,22 @@ export default function AboutPage() {
             <p className="text-sm md:text-base text-muted-foreground font-light max-w-sm mt-3 md:mt-0">Senior educators with strong academic backgrounds across all subjects.</p>
           </FadeIn>
           
-          {/* Mobile: 2-col grid, Desktop: 4-col */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-y border-border divide-x divide-border">
+          {/* Mobile: 2-col grid first row + full-width last, Desktop: 5-col */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border-y border-border divide-x divide-border">
             {faculty.map((f, i) => (
-              <FadeIn key={i} delay={0.05 * i} className="p-4 sm:p-6 md:p-8 group hover:bg-muted/50 transition-colors hover-card border-b md:border-b-0 border-border">
-                <div className="aspect-square bg-muted w-full mb-4 md:mb-8 relative grayscale group-hover:grayscale-0 transition-all duration-500 overflow-hidden">
+              <FadeIn key={i} delay={0.05 * i} className="p-3 sm:p-5 md:p-6 group hover:bg-muted/50 transition-colors hover-card border-b md:border-b-0 border-border">
+                <div className="aspect-square bg-muted w-full mb-3 md:mb-6 relative grayscale group-hover:grayscale-0 transition-all duration-500 overflow-hidden">
+                  <Image
+                    src={f.image}
+                    alt={f.name}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 50vw, 20vw"
+                  />
                   <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h4 className="text-sm md:text-xl font-serif text-foreground mb-0.5 md:mb-1">{f.name}</h4>
-                <p className="text-[9px] md:text-sm font-bold uppercase tracking-widest text-primary mb-1 md:mb-3">{f.subject}</p>
-                <p className="text-[10px] md:text-sm text-muted-foreground font-light hidden sm:block">{f.exp}</p>
+                <h4 className="text-sm md:text-lg font-serif text-foreground mb-0.5 md:mb-1">{f.name}</h4>
+                <p className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-primary">{f.subject}</p>
               </FadeIn>
             ))}
           </div>
