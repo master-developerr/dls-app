@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const faculty = [
-    { name: "Nadarsha", subject: "Physics", image: "/faculty/nadarsha.png" },
-    { name: "Arun B", subject: "Chemistry", image: "/faculty/arun-b.png" },
-    { name: "Mrs Priya", subject: "Mathematics", image: "/faculty/mrs-priya.png" },
-    { name: "Ershad A", subject: "General Aptitude", image: "/faculty/ershad-a.png" },
-    { name: "Shaija Thomas", subject: "Biology", image: "/faculty/shaija-thomas.png" },
+    { name: "Dr Nadarsha S", subject: "Physics", image: "/faculty/nadarsha.png" },
+    { name: "Prof Arun Babu", subject: "Chemistry", image: "/faculty/arun-b.png" },
+    { name: "Mrs Priya S", subject: "Mathematics", image: "/faculty/mrs-priya.png" },
+    { name: "Mr Ershad A", subject: "General Aptitude", image: "/faculty/ershad-a.png" },
+    { name: "Prof Shaija Thomas", subject: "Biology", image: "/faculty/shaija-thomas.png" },
   ];
 
   return (
