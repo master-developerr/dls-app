@@ -6,20 +6,26 @@ import { ReactNode } from "react";
 export function FadeIn({ 
   children, 
   delay = 0, 
-  className = "" 
+  className = "",
+  immediate = false
 }: { 
-  children: ReactNode, 
-  delay?: number, 
-  className?: string 
+  children: ReactNode; 
+  delay?: number; 
+  className?: string;
+  immediate?: boolean;
 }) {
   const prefersReduced = useReducedMotion();
 
+  if (immediate || prefersReduced) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: prefersReduced ? 0 : 20, scale: 0.98 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-8%" }}
-      transition={{ duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "0px", amount: 0 }}
+      transition={{ duration: 0.4, delay, ease: "easeOut" }}
       className={className}
     >
       {children}
