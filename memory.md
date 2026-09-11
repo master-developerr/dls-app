@@ -23,8 +23,8 @@ Last updated: 2026-09-11 13:44
 
 ## Current state
 
-- Homepage (`/`), Dedicated DNST Portal (`/dnst`), Class-wise Syllabus (`/dnst/syllabus`), and Registration (`/dnst/register`) are fully responsive, type-checked (`npx tsc --noEmit` passes with 0 errors), and visually verified on desktop and mobile viewports.
-- All changes are committed and pushed to GitHub `main` (commit `241f181`).
+- Homepage (`/`), Dedicated DNST Portal (`/dnst`), Class-wise Syllabus (`/dnst/syllabus`), and Registration (`/dnst/register`) are fully responsive, type-checked (`npx tsc --noEmit` passes with 0 errors), and animated with subtle, restrained motion tokens.
+- All changes are committed and pushed to GitHub `main` (commit `758116f`).
 
 ## Next session starts with
 
