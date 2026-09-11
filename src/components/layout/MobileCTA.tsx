@@ -45,7 +45,7 @@ export function MobileCTA() {
         href="https://wa.me/919447330561"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+        className="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white items-center justify-center shadow-lg hover:scale-[1.03] active:scale-[0.98] hover:shadow-xl transition-all duration-200 ease-out"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />

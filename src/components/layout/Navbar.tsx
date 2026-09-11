@@ -35,7 +35,7 @@ export function Navbar() {
             <Link
               key={route.path}
               href={route.path}
-              className={`transition-colors py-1 ${
+              className={`transition-colors duration-150 ease-out py-1 ${
                 route.highlight
                   ? "text-accent font-semibold hover:text-accent-dark inline-flex items-center gap-1.5"
                   : "text-text-secondary hover:text-text-primary"

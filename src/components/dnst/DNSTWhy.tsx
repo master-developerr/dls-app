@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export function DNSTWhy() {
   return (
@@ -8,7 +9,7 @@ export function DNSTWhy() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
           {/* Left Column: Headline & Intro */}
-          <div className="lg:col-span-5 space-y-4">
+          <FadeIn className="lg:col-span-5 space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-accent block">
               Assessment Philosophy
             </span>
@@ -21,18 +22,18 @@ export function DNSTWhy() {
             <div className="pt-2">
               <Link
                 href="/dnst/register"
-                className="text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark inline-flex items-center"
+                className="text-xs font-bold uppercase tracking-widest text-accent hover:text-accent-dark inline-flex items-center group transition-colors duration-150 ease-out"
               >
-                Register for Examination <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                Register for Examination <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-0.5 transition-transform duration-200 ease-out" />
               </Link>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right Column: Editorial Divided Content */}
-          <div className="lg:col-span-7 divide-y divide-border border-t border-border">
+          <FadeIn delay={0.08} className="lg:col-span-7 divide-y divide-border border-t border-border">
             
             {/* Block 1: What students discover */}
-            <div className="py-6 space-y-3">
+            <div className="py-6 space-y-3 transition-colors duration-200 ease-out">
               <h3 className="text-lg md:text-xl font-serif font-bold text-text-primary">
                 What Students Discover
               </h3>
@@ -45,7 +46,7 @@ export function DNSTWhy() {
             </div>
 
             {/* Block 2: Recognition & Rewards */}
-            <div className="py-6 space-y-3">
+            <div className="py-6 space-y-3 transition-colors duration-200 ease-out">
               <h3 className="text-lg md:text-xl font-serif font-bold text-text-primary">
                 Recognition & Rewards for Top Performers
               </h3>
@@ -66,7 +67,7 @@ export function DNSTWhy() {
               </div>
             </div>
 
-          </div>
+          </FadeIn>
 
         </div>
       </div>
