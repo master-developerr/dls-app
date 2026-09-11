@@ -7,7 +7,7 @@ Update this file after every completed feature. Any AI agent reading this should
 ## Current Status
 
 **Phase:** Phase 1 — Foundation (Completed) & Phase 4 — DNST Dedicated Portal (Completed)  
-**Last completed:** Decoupled DNST into a dedicated `/dnst` campaign page; restored the authentic DLS institutional homepage on `/` with a single subtle announcement link. Dedicated `/dnst/syllabus` and `/dnst/register` connected.  
+**Last completed:** Redesigned and polished DLS Homepage (`/`) with first-view embedded DNST 2025 opportunity block, 4-tier benchmarking strip, #1 featured program card, verified stats ticker, and responsive mobile optimization.  
 **Next:** Phase 2 — Programs Page & Course Details  
 
 ---
@@ -16,7 +16,7 @@ Update this file after every completed feature. Any AI agent reading this should
 
 ### Phase 1 — Foundation
 
-- [x] 01 Homepage — Full UI (Authentic DLS Institutional Hero, Classroom Photo, Stats Ticker, Philosophy, Regional Network, Consistency Pillars, Programs, UAE Reach, Final CTA, and single subtle DNST announcement bar)
+- [x] 01 Homepage — Full UI (Authentic DLS Hero with Embedded DNST 2025 Feature Block, Classroom Photo, Stats Ticker, DNST Assessment & 4-Tier Benchmarking Strip, Programs & Courses with Featured DNST #1, Educational Philosophy, Consistency Pillars, Regional Network, International Reach, and Final Conversion CTA)
 - [x] 02 Public Navigation + Shared Layout (with DNST nav link pointing to `/dnst`, crisp rectangular buttons, mobile drawer)
 - [x] 03 Design System + Responsive Foundation (Warm ivory palette, #EE5622 accent, sharp borders, zero horizontal overflow)
 - [ ] 04 Convex Database Schema
