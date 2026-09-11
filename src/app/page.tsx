@@ -67,7 +67,7 @@ export default function Home() {
 
           {/* --- EMBEDDED DNST FEATURED OPPORTUNITY BLOCK --- */}
           <FadeIn className="w-full max-w-2xl mb-8 text-left">
-            <div className="border border-border bg-gradient-to-br from-surface via-surface to-accent-muted/40 p-5 sm:p-7 shadow-xs">
+            <div className="border border-border bg-[linear-gradient(135deg,#FFFDF8_0%,#FAF0E2_45%,#FCE5D6_100%)] p-5 sm:p-7 shadow-[0_4px_24px_-6px_rgba(36,33,29,0.07)]">
               
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border pb-3 mb-4">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-accent flex items-center gap-1.5">
