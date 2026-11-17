@@ -12,7 +12,7 @@ export function DNSTHero() {
         {/* Eyebrow */}
         <FadeIn delay={0.02} className="mb-4 md:mb-5">
           <span className="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-accent">
-            DLS National Scholarship Test 2025
+            DLS National Scholarship Test 2027
           </span>
         </FadeIn>
 

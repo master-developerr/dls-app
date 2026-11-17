@@ -5,9 +5,9 @@ Last updated: 2026-09-11 13:44
 ## What was built
 
 - **Homepage Refinement (`src/app/page.tsx`)**:
-  - Integrated a prominent **DNST 2025 Featured Opportunity** block in the first hero viewport with an elegant, multi-stop warm editorial gradient (`linear-gradient(135deg, #FFFDF8 0%, #FAF0E2 45%, #FCE5D6 100%)`) and subtle depth (`shadow-[0_4px_24px_-6px_rgba(36,33,29,0.07)]`).
+  - Integrated a prominent **DNST 2027 Featured Opportunity** block in the first hero viewport with an elegant, multi-stop warm editorial gradient (`linear-gradient(135deg, #FFFDF8 0%, #FAF0E2 45%, #FCE5D6 100%)`) and subtle depth (`shadow-[0_4px_24px_-6px_rgba(36,33,29,0.07)]`).
   - Added a 4-pillar **DNST Assessment & 4-Tier Benchmarking Strip** detailing ₹25L scholarships, diagnostic performance analysis, standardized benchmarking (School → District → State → National), and school excellence, along with a syllabus teaser bar.
-  - Unified the **Programs & Courses** section into a single uniform `.map()` loop where **DNST 2025** is featured as `#1` using the identical row structure, dimensions, padding, typography, and `ArrowDownRight` interaction as NEET Coaching, JEE Main & Advanced, KEAM Preparation, and Foundation Program.
+  - Unified the **Programs & Courses** section into a single uniform `.map()` loop where **DNST 2027** is featured as `#1` using the identical row structure, dimensions, padding, typography, and `ArrowDownRight` interaction as NEET Coaching, JEE Main & Advanced, KEAM Preparation, and Foundation Program.
   - Preserved authentic DLS institutional presence: DLS hero headline (*"Diligence Learning."*), classroom photo with caption, verified stats ticker (2K+ Students, 150+ Top Ranks, 50+ Educators, 15 Years), educational philosophy, regional presence (Kerala, Tamil Nadu, UAE), international reach (Dubai & Abu Dhabi), and final conversion banner.
 
 ## Decisions made

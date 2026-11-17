@@ -39,7 +39,7 @@ export function DNSTRegistrationCTA() {
       <div className="container mx-auto px-4 max-w-3xl">
         <FadeIn className="space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-accent block">
-            Registration Open · 2025
+            Registration Open · 2027
           </span>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-text-primary leading-tight">
             Ready to discover your potential?

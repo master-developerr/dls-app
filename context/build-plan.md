@@ -23,8 +23,8 @@ Build the complete DLS homepage UI with mock content first. Visual direction fol
 
 **UI:**
 
-- Navbar — DLS logo, navigation links (Programs, DNST 2025 pointing to `/dnst`, About, Contact), primary CTA button
-- Single subtle DNST announcement bar — slim top eyebrow announcing DNST 2025 for Classes I–XII linking to `/dnst`
+- Navbar — DLS logo, navigation links (Programs, DNST 2027 pointing to `/dnst`, About, Contact), primary CTA button
+- Single subtle DNST announcement bar — slim top eyebrow announcing DNST 2027 for Classes I–XII linking to `/dnst`
 - DLS Institutional Hero section — high-impact headline ("Diligence Learning."), regional indicator (Kerala · Tamil Nadu · UAE), supporting copy, Primary CTA ("View Programs") and "Book Free Demo" outline button
 - Classroom photography — wide framed authentic classroom photo with physics session caption
 - Verified statistics ticker — 4-column divided metrics (Students Trained 2K+, Top Ranks 150+, Senior Educators 50+, Years 15)
@@ -307,7 +307,7 @@ Build the dedicated DLS National Scholarship Test campaign portal at `/dnst` alo
 
 **UI:**
 
-- DNST Hero (First View) — headline "DLS National Scholarship Test 2025", tagline "Discover Talent. Reward Excellence. Shape the Future.", subtitle "India's Next-Generation Student Assessment Platform", scholarships ₹25 Lakhs, Classes I–XII eligibility, and dual action CTAs ("Register for DNST" and "View Syllabus")
+- DNST Hero (First View) — headline "DLS National Scholarship Test 2027", tagline "Discover Talent. Reward Excellence. Shape the Future.", subtitle "India's Next-Generation Student Assessment Platform", scholarships ₹25 Lakhs, Classes I–XII eligibility, and dual action CTAs ("Register for DNST" and "View Syllabus")
 - "Why DNST?" section — discovering thinking, reasoning, problem solving, academic performance, and eligibility for scholarships, awards, certificates, medals, and national recognition
 - "What Makes DNST Different?" section — 5 core numbered editorial rows (01 to 05)
 - Academic Benchmarking section — 4-tier horizontal progression (School → District → State → National)

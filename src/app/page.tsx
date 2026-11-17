@@ -23,7 +23,7 @@ export default function Home() {
       <aside aria-label="DNST Announcement" className="border-b border-border bg-surface py-2.5 px-4 text-xs">
         <div className="container mx-auto max-w-6xl flex flex-wrap items-center justify-center gap-2 text-center text-text-secondary">
           <span className="font-bold text-accent uppercase tracking-widest text-[10px] inline-flex items-center gap-1">
-            <Sparkles className="w-3.5 h-3.5" /> DNST 2025
+            <Sparkles className="w-3.5 h-3.5" /> DNST 2027
           </span>
           <span className="text-border-strong hidden sm:inline">·</span>
           <span>
@@ -80,7 +80,7 @@ export default function Home() {
 
               <div className="space-y-2">
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-text-primary">
-                  DLS National Scholarship Test (DNST) 2025
+                  DLS National Scholarship Test (DNST) 2027
                 </h2>
                 <p className="text-xs sm:text-sm italic font-serif text-accent">
                   &ldquo;Discover Talent. Reward Excellence. Shape the Future.&rdquo;
@@ -217,7 +217,7 @@ export default function Home() {
               Assessment & Insights
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-text-primary">
-              Why Students & Schools Choose <span className="italic text-accent">DNST 2025.</span>
+              Why Students & Schools Choose <span className="italic text-accent">DNST 2027.</span>
             </h2>
             <p className="text-sm sm:text-base text-text-secondary font-light max-w-2xl mx-auto">
               DNST combines a nationally designed scholarship examination with diagnostic performance analysis to help students, parents, and schools make informed academic decisions.
@@ -313,8 +313,8 @@ export default function Home() {
             <div className="border border-border bg-surface divide-y divide-border">
               {[
                 {
-                  title: "DNST 2025 — DLS National Scholarship Test",
-                  duration: "DNST 2025 · Scholarship Test",
+                  title: "DNST 2027 — DLS National Scholarship Test",
+                  duration: "DNST 2027 · Scholarship Test",
                   desc: "A national scholarship test combining assessment with detailed performance analysis. Scholarships worth ₹25 Lakhs.",
                   href: "/dnst",
                   featured: true,
@@ -530,7 +530,7 @@ export default function Home() {
               Start your <span className="italic text-accent">journey.</span>
             </h2>
             <p className="text-base md:text-lg text-text-secondary font-light max-w-xl mx-auto">
-              Register for the DNST 2025 scholarship examination or connect with our academic advisors to find the right coaching program.
+              Register for the DNST 2027 scholarship examination or connect with our academic advisors to find the right coaching program.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
               <Link href="/dnst/register" className="w-full sm:w-auto group">

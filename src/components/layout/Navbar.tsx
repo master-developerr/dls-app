@@ -9,7 +9,7 @@ import Image from "next/image";
 export function Navbar() {
   const routes = [
     { name: "Programs", path: "/programs" },
-    { name: "DNST 2025", path: "/dnst", highlight: true },
+    { name: "DNST 2027", path: "/dnst", highlight: true },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];

@@ -5,7 +5,7 @@ import { DNSTRegistrationForm } from "@/components/dnst/DNSTRegistrationForm";
 import { DNST_META } from "@/lib/dnst-data";
 
 export const metadata = {
-  title: "Register for DNST 2025 | DLS National Scholarship Test",
+  title: "Register for DNST 2027 | DLS National Scholarship Test",
   description: "Official registration portal for the DLS National Scholarship Test (DNST). Open for students from Classes I to XII.",
 };
 
@@ -30,7 +30,7 @@ export default function DNSTRegisterPage() {
           </Badge>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-text-primary tracking-tight leading-[1.1] mb-4">
-            Register for DNST 2025
+            Register for DNST 2027
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">

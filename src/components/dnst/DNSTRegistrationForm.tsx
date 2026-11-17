@@ -51,7 +51,7 @@ export function DNSTRegistrationForm() {
             Direct Registration
           </Badge>
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-text-primary leading-tight">
-            Register for DNST 2025
+            Register for DNST 2027
           </h3>
           <p className="text-sm text-text-secondary leading-relaxed">
             Open for students from Classes I to XII. Register today to receive your examination schedule, benchmarking guidelines, and scholarship updates.
