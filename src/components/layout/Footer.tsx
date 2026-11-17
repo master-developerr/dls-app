@@ -50,7 +50,7 @@ export function Footer() {
         </div>
         
         <div className="mt-10 md:mt-14 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-text-muted">
-          <p>© {new Date().getFullYear()} Diligence Learning Solutions. All rights reserved.</p>
+          <p>© 2027 Diligence Learning Solutions. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-text-primary">Privacy</Link>
             <Link href="/terms" className="hover:text-text-primary">Terms</Link>
